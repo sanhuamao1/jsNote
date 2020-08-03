@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>协议按钮禁用</title>
+</head>
+<body>
+    <textarea cols="40" rows="10">
+        你必须看完这个协议才能注册！！
+        重要的事情说三遍！
+        你必须看完这个协议才能注册！！
+        你必须看完这个协议才能注册！！
+        你必须看完这个协议才能注册！！
+    </textarea>
+    <input type="button" value="请仔细阅读协议(5)" id="btn" disabled>
+
+    <script>
+        var time=5
+        var timeId=setInterval(function(){
+            document.getElementById("btn").value="请仔细阅读协议("+time+")"
+            //每次调用事件减1
+            time--
+            if(time<=0){
+                clearInterval(timeId)
+                //此时按钮可以点了
+                document.getElementById("btn").disabled=false
+                document.getElementById("btn").value="同意"
+            }
+        },1000)
+    </script>
+</body>
+</html>
