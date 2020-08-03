@@ -81,6 +81,7 @@ document.write()==>实则：window.document.write()
   var timeId=setInterval(function(){alert("hello")},1000)
   window.clearInterval(timeId)
   ```
+  >[协议倒计时内禁用案例](https://github.com/sanhuamao1/BOM/blob/master/%E5%AE%9A%E6%97%B6%E5%99%A8-%E5%8D%8F%E8%AE%AE%E6%8C%89%E9%92%AE%E7%A6%81%E7%94%A8.html)
 4. **一次性定时器**
 - `setTimeout(fn,time)`
 
