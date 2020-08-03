@@ -9,6 +9,14 @@ var num=10
 console.log(num)==>实则：console.log(window.num)
 document.write()==>实则：window.document.write()
 ```
+> window可以将局部变量变成全局变量
+```js
+(function(win){
+  var num=10
+  win.num=num
+})(window)
+console.log(num)//-->10
+```
 
 ### 属性
 - `innerHeight`——返回窗口的文档显示区的高
